@@ -177,14 +177,28 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-pessoa.apresentacao = function(){ 
-if(pessoa.sexo === 'Feminino') {return'Ola, eu sou a ' + pessoa.nomeCompleto + ','} 
-else { return 'Ola!, eu sou o ' + pessoa.nomeCompleto + ','} 									
-if(pessoa.idade === 1){ return ' tenho ' + pessoa.idade + 'ano,';} 			
-else { return' tenho ' + pessoa.idade + 'anos,';} 							
-return 'pessoa.altura + ' metros, meu peso é ' + pessoa.peso + 'e só hoje, eu caminhei ' + pessoa.caminhouQuantosMetros + 'metros!';}
 
+pessoa.apresentacao = function() {
+	if (pessoa.sexo == "Feminino"){
+		var nomeCompleto = "Olá eu sou a" + pessoa.nomeCompleto()+", ";	
+	} else {
+		var nomeCompleto = "Olá eu sou o" + pessoa.nomeCompleto()+", ";	
+	}
+	if (pessoa.idade == 1){
+		var idade = "tenho " + pessoa.idade +" ano, ";
+	}else {
+		var idade = "tenho " + pessoa.idade +" anos, ";
+	}
+
+	if (pessoa.caminhouquantosMetros == 1){
+		var metros = "e, só hoje, eu ja caminhei " + pessoa.caminhouquantosMetros + " metro."
+	} else {
+		var metros = "e, só hoje, eu ja caminhei " + pessoa.caminhouquantosMetros + " metro."
+	}
+
+	return  nomeCompleto + idade + pessoa.altura +", meu peso é " + pessoa.peso + metros;	
+}
 
 // Agora, apresente-se ;)
- :,( ERRO DE SINTAXE, MAS NAO ACHEI!! 
+ 
 ```
