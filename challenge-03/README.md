@@ -20,9 +20,9 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
  nome:'Luciana', 
  sobrenome:'Felgueiras', 
  sexo: 'Feminino', 
- idade:36, 
+ idade:37, 
  altura:1.70, 
- peso:69, 
+ peso:70, 
  andando:false, 
  caminhouQuantosMetros:0
  };
@@ -73,7 +73,7 @@ pessoa.mostrarIdade = function() {
   return 'Ola! eu tenho '+ pessoa.idade + '' + 'anos.'
 }
 
-//Ola! eu tenho 36 anos.
+//Ola! eu tenho 37 anos.
 
 /*
 Crie um método chamado `mostrarPeso`, que retorne a frase:
@@ -95,39 +95,39 @@ Agora vamos brincar um pouco com o objeto criado:
 Qual o nome completo da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.nomeCompleto()  // Ola! meu nome éLuciana Felgueiras.
+pessoa.nomeCompleto()  // Ola! meu nome é Luciana Felgueiras.
 
 /*
 Qual a idade da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.idade // 36
+pessoa.idade // Eu tenho 37 anos.
 
 /*
 Qual o peso da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.peso  // 69
+pessoa.peso  // Eu peso 70 Kilos
 
 /*
 Qual a altura da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.altura //1.7  esqueci de declarar como string rsrs
+pessoa.altura // Minha altura é 1.7 metros.
 
 /*
 Faça a `pessoa` fazer 3 aniversários.
 */
-pessoa.fazerAniversario()   //37
-pessoa.fazerAniversario()   //38
-pessoa.fazerAniversario()   //39
+pessoa.fazerAniversario()   //
+pessoa.fazerAniversario()   //
+pessoa.fazerAniversario()   //
 
 /*
 Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
 comentários inline ao lado da instrução para mostrar qual foi a resposta
 retornada)
 */
-pessoa.idade  // 39
+pessoa.idade  // 40
 
 /*
 Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
@@ -179,26 +179,25 @@ correta, de acordo com os dados inseridos no objeto.
 */
 
 pessoa.apresentacao = function() {
+var sexo = 'o';
+var mts = 'metros';
+var anoIdade = 'anos';
+
 	if (pessoa.sexo == "Feminino"){
-		var nomeCompleto = "Olá eu sou a" + pessoa.nomeCompleto()+", ";	
-	} else {
-		var nomeCompleto = "Olá eu sou o" + pessoa.nomeCompleto()+", ";	
-	}
-	if (pessoa.idade == 1){
-		var idade = "tenho " + pessoa.idade +" ano, ";
-	}else {
-		var idade = "tenho " + pessoa.idade +" anos, ";
-	}
-
-	if (pessoa.caminhouquantosMetros == 1){
-		var metros = "e, só hoje, eu ja caminhei " + pessoa.caminhouquantosMetros + " metro."
-	} else {
-		var metros = "e, só hoje, eu ja caminhei " + pessoa.caminhouquantosMetros + " metro."
-	}
-
-	return  nomeCompleto + idade + pessoa.altura +", meu peso é " + pessoa.peso + metros;	
-}
-
+		sexo = 'a';	
+  }
+  
+  if (pessoa.idade === 1){
+   anoIdade = 'ano';
+  }
+  
+  if (pessoa.caminhouQtosMetros === 1){
+  mts = 'metro';
+  }
+  
+  Olá, eu sou ' + sexo + ' ' + pessoa.nome + ' + ' ' + ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' ' + anosIdade + ', ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminheiQtosMetros + ' ' + mts + '!"
+  
+	
 // Agora, apresente-se ;)
  
-```
+Olá, meu nome é Luciana Felgueiras, tenho 37 anos, 1.70m, meu peso é 70 kilos, e só hoje eu ja caminhei 10 metros.
